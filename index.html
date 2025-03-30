@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediConnect - Personalized Health Insights</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased transition-colors duration-300">
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-50 transition-colors duration-300">
+        <div class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-10 h-10 md:w-12 md:h-12 bg-blue-500 rounded-full flex items-center justify-center mr-2 md:mr-3">
+                    <i data-feather="activity" class="text-white w-5 h-5 md:w-6 md:h-6"></i>
+                </div>
+                <h1 class="text-xl md:text-2xl font-bold text-blue-600">MediConnect</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <!-- Dark Mode Toggle Button -->
+                <button id="dark-mode-toggle" class="focus:outline-none p-2 rounded-full hover:bg-gray-100 transition-colors duration-300" aria-label="Toggle dark mode">
+                    <i data-feather="moon" class="w-5 h-5"></i>
+                </button>
+                <div class="mobile-menu-toggle md:hidden">
+                    <button id="menu-toggle" class="focus:outline-none" aria-label="Toggle menu">
+                        <i data-feather="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="nav-links hidden md:flex space-x-6 items-center">
+                <a href="#features" class="nav-link hover:text-blue-600 transition">Features</a>
+                <a href="#how-it-works" class="nav-link hover:text-blue-600 transition">How It Works</a>
+                <a href="#contact" class="cta-button bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Contact</a>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu hidden w-full bg-white absolute top-full left-0 shadow-lg py-4 transition-all duration-300 ease-in-out">
+            <div class="flex flex-col items-center space-y-4">
+                <a href="#features" class="mobile-nav-link w-full text-center py-2 hover:bg-blue-50">Features</a>
+                <a href="#how-it-works" class="mobile-nav-link w-full text-center py-2 hover:bg-blue-50">How It Works</a>
+                <a href="#contact" class="mobile-nav-link bg-blue-600 text-white px-4 py-2 rounded-full mx-auto">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="relative pt-24 md:pt-28 pb-16 bg-gradient-to-br from-blue-100 to-purple-100 overflow-hidden transition-colors duration-300">
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <div class="hero-content max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6 text-gray-900 leading-tight">Personalized Health Insights at Your Fingertips</h2>
+                <p class="text-base md:text-xl mb-8 max-w-2xl mx-auto text-gray-700">Comprehensive medical consultancy with AI-powered risk assessment and personalized recommendations.</p>
+                <div class="flex flex-col sm:flex-row justify-center sm:space-x-4 space-y-4 sm:space-y-0">
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition shadow-lg">Get Started</a>
+                    <a href="#features" class="bg-white text-blue-600 px-6 py-3 rounded-full text-lg border border-blue-600 hover:bg-blue-50 transition">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Shapes -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-0 w-48 h-48 bg-blue-200 rounded-full opacity-30 blur-2xl transform -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-64 h-64 bg-purple-200 rounded-full opacity-30 blur-2xl transform translate-x-1/2 translate-y-1/2"></div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 md:py-16 bg-white transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-900">Revolutionize Your Health Management</h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="feature-card p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="feature-icon-wrapper bg-blue-100 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="activity" class="w-7 h-7 md:w-8 md:h-8 text-blue-600"></i>
+                    </div>
+                    <h4 class="text-lg md:text-xl font-semibold mb-3 text-gray-800">Advanced Risk Assessment</h4>
+                    <p class="text-gray-600">Comprehensive analysis using cutting-edge AI algorithms to predict potential health risks.</p>
+                </div>
+                <div class="feature-card p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2">
+                    <div class="feature-icon-wrapper bg-green-100 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="user" class="w-7 h-7 md:w-8 md:h-8 text-green-600"></i>
+                    </div>
+                    <h4 class="text-lg md:text-xl font-semibold mb-3 text-gray-800">Personalized Health Insights</h4>
+                    <p class="text-gray-600">Tailored recommendations based on your unique health profile and genetic information.</p>
+                </div>
+                <div class="feature-card p-6 bg-gray-50 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 sm:col-span-2 md:col-span-1 sm:mx-auto sm:max-w-md md:max-w-none">
+                    <div class="feature-icon-wrapper bg-purple-100 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="clipboard" class="w-7 h-7 md:w-8 md:h-8 text-purple-600"></i>
+                    </div>
+                    <h4 class="text-lg md:text-xl font-semibold mb-3 text-gray-800">Rapid Symptom Analysis</h4>
+                    <p class="text-gray-600">Instant preliminary assessment with machine learning-powered symptom tracking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-12 md:py-16 bg-gradient-to-br from-purple-50 to-blue-50 transition-colors duration-300">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl md:text-4xl font-bold mb-8 md:mb-12 text-gray-900">Simple. Smart. Secure.</h3>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-md relative overflow-hidden transition-colors duration-300">
+                    <div class="step-number absolute top-4 right-4 text-5xl md:text-6xl font-bold text-blue-100">1</div>
+                    <div class="bg-blue-100 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="user-plus" class="w-7 h-7 md:w-8 md:h-8 text-blue-600"></i>
+                    </div>
+                    <h4 class="text-lg md:text-xl font-semibold mb-3 text-gray-800">Create Profile</h4>
+                    <p class="text-gray-600">Securely create your personalized health profile with essential information.</p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-md relative overflow-hidden transition-colors duration-300">
+                    <div class="step-number absolute top-4 right-4 text-5xl md:text-6xl font-bold text-green-100">2</div>
+                    <div class="bg-green-100 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="edit-3" class="w-7 h-7 md:w-8 md:h-8 text-green-600"></i>
+                    </div>
+                    <h4 class="text-lg md:text-xl font-semibold mb-3 text-gray-800">Input Symptoms</h4>
+                    <p class="text-gray-600">Describe your health concerns using our intuitive, comprehensive interface.</p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-md relative overflow-hidden transition-colors duration-300 sm:col-span-2 md:col-span-1 sm:mx-auto sm:max-w-md md:max-w-none">
+                    <div class="step-number absolute top-4 right-4 text-5xl md:text-6xl font-bold text-purple-100">3</div>
+                    <div class="bg-purple-100 w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="trending-up" class="w-7 h-7 md:w-8 md:h-8 text-purple-600"></i>
+                    </div>
+                    <h4 class="text-lg md:text-xl font-semibold mb-3 text-gray-800">Get Insights</h4>
+                    <p class="text-gray-600">Receive actionable, personalized health recommendations instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Chatbot/Health Assessment Section -->
+<section id="health-assessment" class="py-12 md:py-16 bg-white transition-colors duration-300">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-8 md:mb-12">
+            <h2 class="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900">Get Your Personalized Health Assessment</h2>
+            <p class="text-base md:text-lg text-gray-600 mb-6 md:mb-8">Tell us about your symptoms and health concerns to receive AI-powered insights and recommendations.</p>
+        </div>
+        <div class="max-w-lg mx-auto bg-gray-50 p-6 md:p-8 rounded-xl shadow-md transition-colors duration-300">
+            <div id="chatbot-container">
+                <div id="chat-messages" class="mb-6 max-h-80 overflow-y-auto p-4 bg-white rounded-lg border border-gray-200 transition-colors duration-300">
+                    <div class="bot-message mb-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mr-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-4 h-4">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                            </div>
+                            <div class="bg-blue-100 rounded-lg p-3 max-w-xs md:max-w-md">
+                                <p class="text-gray-800">Hello! I'm your MediConnect assistant. To provide you with personalized health insights, I'll need some information. Let's start with your name.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="assessment-form" class="space-y-4">
+                    <div id="step-1" class="assessment-step">
+                        <label for="user-name" class="block text-gray-700 mb-2">Your Name</label>
+                        <input type="text" id="user-name" placeholder="Enter your full name" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required aria-describedby="name-error">
+                        <div class="error-message text-red-500 text-sm mt-1 hidden" id="name-error">Please enter your name</div>
+                    </div>
+                    
+                    <div id="step-2" class="assessment-step hidden">
+                        <label for="user-age" class="block text-gray-700 mb-2">Your Age</label>
+                        <input type="number" id="user-age" placeholder="Enter your age" min="1" max="120" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required aria-describedby="age-error">
+                        <div class="error-message text-red-500 text-sm mt-1 hidden" id="age-error">Please enter a valid age (1-120)</div>
+                    </div>
+                    
+                    <div id="step-3" class="assessment-step hidden">
+                        <label for="user-symptoms" class="block text-gray-700 mb-2">Symptoms</label>
+                        <textarea id="user-symptoms" placeholder="Describe your symptoms in detail" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" required aria-describedby="symptoms-error"></textarea>
+                        <div class="error-message text-red-500 text-sm mt-1 hidden" id="symptoms-error">Please describe your symptoms</div>
+                    </div>
+                    
+                    <div id="step-4" class="assessment-step hidden">
+                        <label for="user-condition" class="block text-gray-700 mb-2">Known Medical Conditions</label>
+                        <textarea id="user-condition" placeholder="Enter any known medical conditions or diagnoses (optional)" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3"></textarea>
+                    </div>
+                    
+                    <div id="step-5" class="assessment-step hidden">
+                        <label for="user-duration" class="block text-gray-700 mb-2">Symptom Duration</label>
+                        <select id="user-duration" class="w-full p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required aria-describedby="duration-error">
+                            <option value="" disabled selected>Select duration</option>
+                            <option value="hours">Hours (less than a day)</option>
+                            <option value="days">Days (less than a week)</option>
+                            <option value="weeks">Weeks (less than a month)</option>
+                            <option value="months">Months or longer</option>
+                        </select>
+                        <div class="error-message text-red-500 text-sm mt-1 hidden" id="duration-error">Please select symptom duration</div>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3">
+                        <button type="button" id="back-btn" class="hidden px-5 py-2 border border-blue-500 text-blue-500 rounded-full hover:bg-blue-50 transition" aria-label="Go back to previous step">Back</button>
+                        <button type="button" id="next-btn" class="w-full bg-blue-600 text-white py-3 rounded-full hover:bg-blue-700 transition" aria-label="Proceed to next step">Next</button>
+                        <button type="submit" id="submit-btn" class="hidden w-full bg-green-600 text-white py-3 rounded-full hover:bg-green-700 transition" aria-label="Submit and get health assessment">Get Assessment</button>
+                    </div>
+                </form>
+                
+                <div id="assessment-result" class="mt-6 p-5 bg-blue-50 rounded-lg border border-blue-200 hidden transition-colors duration-300" aria-live="polite">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Your Personalized Health Assessment</h3>
+                    <div id="result-content"></div>
+                    <div class="mt-4 pt-4 border-t border-blue-200">
+                        <p class="text-sm text-gray-600"><strong>Important:</strong> This is a preliminary assessment based on the information provided. Please consult with a healthcare professional for proper diagnosis and treatment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 md:py-12 transition-colors duration-300">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center md:text-left">
+                    <h4 class="text-xl font-bold mb-4">MediConnect</h4>
+                    <p class="text-gray-400">Revolutionizing personal health management through advanced AI and personalized insights.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                    <nav class="flex flex-col space-y-2">
+                        <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
+                        <a href="#how-it-works" class="text-gray-300 hover:text-white transition">How It Works</a>
+                        <a href="#health-assisstant" class="text-gray-300 hover:text-white transition">Contact</a>
+                    </nav>
+                </div>
+                <div class="text-center md:text-left">
+                    <h4 class="text-xl font-bold mb-4">Connect With Us</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white transition" aria-label="Facebook"><i data-feather="facebook"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition" aria-label="twitter"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white transition" aria-label="Instagram"><i data-feather="instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center">
+                <p class="text-gray-400">&copy; 2025 MediConnect. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-5 right-5 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden focus:outline-none hover:bg-blue-700 transition" aria-label="Back to top">
+        <i data-feather="chevron-up" class="w-5 h-5"></i>
+    </button>
+
+    <script src="index.js"></script>
+</body>
+</html>
